@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Poker V2 Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>♠ Multiplayer Poker V2 Pro ♥</h1>
+    <p class="subtitle">Room codes • Real hand ranking • 2+ players to start</p>
+
+    <div class="card setup-card">
+        <h2>Join a Room</h2>
+
+        <label for="playerName">Player Name</label>
+        <input type="text" id="playerName" placeholder="Enter your name">
+
+        <label for="roomCode">Room Code</label>
+        <div class="room-row">
+            <input type="text" id="roomCode" placeholder="Enter room code">
+            <button id="randomRoomBtn">Random Code</button>
+        </div>
+
+        <div class="button-row">
+            <button id="joinBtn">Join Room</button>
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+
+    <div class="card status-card">
+        <h2>Game Status</h2>
+        <p id="statusText">Not connected yet.</p>
+        <p id="currentRoom">Room: —</p>
+    </div>
+
+    <div class="card">
+        <h2>Community Cards</h2>
+        <div id="communityCards" class="cards-area empty-state">No cards yet</div>
+    </div>
+
+    <div class="card">
+        <h2>Players</h2>
+        <div id="playersList" class="players-list empty-state">No players yet</div>
+    </div>
+
+    <div class="card actions-card">
+        <h2>Actions</h2>
+        <div class="button-row">
+            <button id="checkBtn">Check</button>
+            <button id="callBtn">Call</button>
+            <button id="foldBtn" class="danger">Fold</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
