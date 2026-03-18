@@ -13,12 +13,12 @@ import {
    1) PASTE YOUR FIREBASE CONFIG HERE
    ========================= */
 const firebaseConfig = {
-  apiKey: "PASTE_ME",
-  authDomain: "PASTE_ME",
-  projectId: "PASTE_ME",
-  storageBucket: "PASTE_ME",
-  messagingSenderId: "PASTE_ME",
-  appId: "PASTE_ME"
+  apiKey: "AIzaSyCoHUz0jK7f7qJVvHXhJNNIbPTGN7vAnjQ",
+  authDomain: "pokerbyai.firebaseapp.com",
+  projectId: "pokerbyai",
+  storageBucket: "pokerbyai.firebasestorage.app",
+  messagingSenderId: "1082184395114",
+  appId: "1:1082184395114:web:78db5988c967d2a5579d13"
 };
 
 const app = initializeApp(firebaseConfig);
