@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplayer Poker V3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>♠ Multiplayer Poker V3</h1>
+    <p class="subtitle">Free GitHub Pages + Firebase version</p>
+
+    <div class="card">
+      <h2>Join / Create Room</h2>
+
+      <label for="playerName">Player Name</label>
+      <input id="playerName" type="text" placeholder="Enter your name" maxlength="16" />
+
+      <label for="roomCode">Room Code</label>
+      <div class="room-row">
+        <input id="roomCode" type="text" placeholder="Enter room code" maxlength="6" />
+        <button id="randomRoomBtn">Random Code</button>
+      </div>
+
+      <div class="button-row">
+        <button id="joinBtn">Join Room</button>
+        <button id="startBtn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Game Status</h2>
+      <p id="statusText">Not connected</p>
+      <p id="currentRoom">Room: —</p>
+      <p id="potText">Pot: 0</p>
+      <p id="turnText">Turn: —</p>
+    </div>
+
+    <div class="card">
+      <h2>Community Cards</h2>
+      <div id="communityCards" class="cards-area empty-state">No cards yet</div>
+    </div>
+
+    <div class="card">
+      <h2>Your Hand</h2>
+      <div id="myHand" class="cards-area empty-state">Join a room first</div>
+      <p id="myHandRank" class="hand-rank">Hand Rank: —</p>
+    </div>
+
+    <div class="card">
+      <h2>Players</h2>
+      <div id="playersList" class="players-list empty-state">No players yet</div>
+    </div>
+
+    <div class="card">
+      <h2>Actions</h2>
+      <div class="button-row">
+        <button id="checkBtn">Check</button>
+        <button id="callBtn">Call</button>
+        <button id="foldBtn" class="danger">Fold</button>
+        <button id="nextStreetBtn">Next Street</button>
+      </div>
+      <small class="helper">
+        V3 demo: Check/Call both act as “ready”, Fold folds, Next Street advances manually.
+      </small>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
