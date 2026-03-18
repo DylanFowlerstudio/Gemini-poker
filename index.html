@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multiplayer Poker V3</title>
+  <title>Poker V3</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>♠ Multiplayer Poker V3</h1>
-    <p class="subtitle">Free GitHub Pages + Firebase version</p>
+    <h1>🃏 Poker V3</h1>
+    <p class="subtitle">Free GitHub Pages + Firebase Multiplayer Poker</p>
 
     <div class="card">
       <h2>Join / Create Room</h2>
 
-      <label for="playerName">Player Name</label>
-      <input id="playerName" type="text" placeholder="Enter your name" maxlength="16" />
+      <label for="nameInput">Your Name</label>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
 
-      <label for="roomCode">Room Code</label>
+      <label for="roomInput">Room Code</label>
       <div class="room-row">
-        <input id="roomCode" type="text" placeholder="Enter room code" maxlength="6" />
-        <button id="randomRoomBtn">Random Code</button>
+        <input type="text" id="roomInput" placeholder="Enter room code" />
+        <button id="randomRoomBtn">Random Room</button>
       </div>
 
+      <label for="playerCountInput">Players Needed To Start (2–6)</label>
+      <input type="number" id="playerCountInput" min="2" max="6" value="2" />
+
       <div class="button-row">
-        <button id="joinBtn">Join Room</button>
+        <button id="joinBtn">Create / Join Room</button>
         <button id="startBtn">Start Game</button>
       </div>
     </div>
@@ -32,25 +35,23 @@
     <div class="card">
       <h2>Game Status</h2>
       <p id="statusText">Not connected</p>
-      <p id="currentRoom">Room: —</p>
+      <p id="currentRoom">Room: None</p>
       <p id="potText">Pot: 0</p>
-      <p id="turnText">Turn: —</p>
+      <p id="turnText">Current Turn: None</p>
     </div>
 
     <div class="card">
       <h2>Community Cards</h2>
-      <div id="communityCards" class="cards-area empty-state">No cards yet</div>
+      <div id="communityCards" class="cards-area">
+        <p class="empty-state">No community cards yet</p>
+      </div>
     </div>
 
     <div class="card">
       <h2>Your Hand</h2>
-      <div id="myHand" class="cards-area empty-state">Join a room first</div>
-      <p id="myHandRank" class="hand-rank">Hand Rank: —</p>
-    </div>
-
-    <div class="card">
-      <h2>Players</h2>
-      <div id="playersList" class="players-list empty-state">No players yet</div>
+      <div id="yourHand" class="cards-area">
+        <p class="empty-state">Join a room first</p>
+      </div>
     </div>
 
     <div class="card">
@@ -58,12 +59,21 @@
       <div class="button-row">
         <button id="checkBtn">Check</button>
         <button id="callBtn">Call</button>
+        <button id="betBtn">Bet 10</button>
         <button id="foldBtn" class="danger">Fold</button>
-        <button id="nextStreetBtn">Next Street</button>
       </div>
-      <small class="helper">
-        V3 demo: Check/Call both act as “ready”, Fold folds, Next Street advances manually.
-      </small>
+    </div>
+
+    <div class="card">
+      <h2>Players</h2>
+      <div id="playersList" class="players-list">
+        <p class="empty-state">No players yet</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Winner</h2>
+      <p id="winnerText">No winner yet</p>
     </div>
   </div>
 
