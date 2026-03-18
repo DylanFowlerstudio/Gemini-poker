@@ -96,12 +96,12 @@ button:hover {
   margin-top: 10px;
 }
 
-#joinBtn, #startBtn, #randomRoomBtn, #checkBtn, #callBtn, #nextStreetBtn {
+#joinBtn, #startBtn, #randomRoomBtn, #checkBtn, #callBtn, #betBtn {
   background: #4fc3f7;
   color: #07202c;
 }
 
-#joinBtn:hover, #startBtn:hover, #randomRoomBtn:hover, #checkBtn:hover, #callBtn:hover, #nextStreetBtn:hover {
+#joinBtn:hover, #startBtn:hover, #randomRoomBtn:hover, #checkBtn:hover, #callBtn:hover, #betBtn:hover {
   background: #67d0ff;
 }
 
@@ -114,10 +114,16 @@ button:hover {
   background: #ff8080;
 }
 
-#statusText, #currentRoom, #potText, #turnText {
+#statusText, #potText, #turnText, #winnerText {
   font-size: 1.05rem;
   margin-bottom: 8px;
   color: #f5fbff;
+}
+
+#currentRoom {
+  color: #cde7ff;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .cards-area {
@@ -180,30 +186,6 @@ button:hover {
 .empty-state {
   color: #cfe3f3;
   font-style: italic;
-}
-
-.hand-rank {
-  margin-top: 12px;
-  color: #d8f3ff;
-  font-weight: bold;
-}
-
-.helper {
-  display: block;
-  margin-top: 12px;
-  color: #cfe3f3;
-}
-
-.active-turn {
-  border: 2px solid #4fc3f7;
-}
-
-.folded-player {
-  opacity: 0.6;
-}
-
-.winner {
-  border: 2px solid #8dff8d;
 }
 
 @media (max-width: 600px) {
